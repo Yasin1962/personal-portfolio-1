@@ -1,0 +1,190 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  line-height: 1.6;
+  color: #0d0404;
+  background-color: #300d0d;
+}
+//* ===== HERO SECTION ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #000000; /* hero default text = black */
+}
+
+/* NAME */
+.hero h1 {
+  font-size: 4rem;        /* ✅ fixed */
+  font-weight: 700;
+  color: #000000;        /* ✅ name in BLACK */
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.hero p {
+  font-size: 2rem;
+  color: #000000;        /* ✅ subtitle in BLACK */
+  margin-bottom: 20px;
+}
+
+/* ===== BOX STYLING WITH BOTTOM BORDER ===== */
+.box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+  border-bottom: 4px solid #000000; /* blue bottom border */
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing {
+  border-right: 2px solid #11262f; /* blinking cursor color */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 25ch; /* adjust to match your text length */
+  animation: typing 4s steps(25) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50%, 100% { width: 25ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ===== ANIMATION ===== */
+.animate-col {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADINGS & TEXT ===== */
+h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #182c50;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #152e3a;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills .box {
+  background: linear-gradient(135deg, #10222a, #0c171d);
+  color: #1f0d0d;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 15px 25px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills .box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.projects li {
+  font-size: 1.2rem; /* smaller than before */
+  font-weight: 500;   /* optional: slightly lighter */
+  margin-bottom: 12px;
+  list-style-type: square;
+  padding-left: 15px;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.download-btn {
+  font-size: 22px;
+  padding: 18px 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #490a0a;
+  color: #3b0808a3;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(76, 7, 16, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.5);
+}
+
+.download-btn .btn-icon {
+  font-size: 26px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+  60% { transform: translateY(-3px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  .hero h1 { font-size: 3rem; }
+  .hero p { font-size: 1.4rem; }
+  .skills .box { font-size: 1rem; padding: 12px 20px; }
+}
